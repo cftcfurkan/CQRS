@@ -5509,11 +5509,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\FURKAN\\Documents\\GitHub\\CQRS(.Net 5)\\CQRS(.Net 5)\\CQRS(.Net 5).csproj",
+      "projectUniqueName": "C:\\Users\\FURKAN\\Documents\\GitHub\\WebAPICQRS\\CQRS(.Net 5)\\CQRS(.Net 5)\\CQRS(.Net 5).csproj",
       "projectName": "CQRS(.Net 5)",
-      "projectPath": "C:\\Users\\FURKAN\\Documents\\GitHub\\CQRS(.Net 5)\\CQRS(.Net 5)\\CQRS(.Net 5).csproj",
+      "projectPath": "C:\\Users\\FURKAN\\Documents\\GitHub\\WebAPICQRS\\CQRS(.Net 5)\\CQRS(.Net 5)\\CQRS(.Net 5).csproj",
       "packagesPath": "C:\\Users\\FURKAN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\FURKAN\\Documents\\GitHub\\CQRS(.Net 5)\\CQRS(.Net 5)\\obj\\",
+      "outputPath": "C:\\Users\\FURKAN\\Documents\\GitHub\\WebAPICQRS\\CQRS(.Net 5)\\CQRS(.Net 5)\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

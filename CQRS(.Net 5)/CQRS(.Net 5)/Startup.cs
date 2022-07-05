@@ -22,6 +22,7 @@ namespace CQRS_.Net_5_
             {
                 opt.UseSqlServer("Server=DESKTOP-6F41OFO\\FURKAN; Database=Cqrs; Integrated Security=true;");
             });
+            services.AddScoped<GetStudentByIdQueryHandler>();
             services.AddControllers().AddNewtonsoftJson(opt =>
             {
                 opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;

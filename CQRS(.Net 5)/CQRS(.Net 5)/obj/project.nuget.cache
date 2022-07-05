@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Mcia1jVxIbi/63T3jSXyVpbk6bKnf/4rw3no/JWFu/3glNCFPXSbnIwuX146q0O/o7oZ3wSCNZw2uCWLVwpZlA==",
+  "dgSpecHash": "Z+go62dk7tBWxDAZ0oiQ2oP9RJGD0JblKNWa2WTfis2iX8TTF12ZEDP+NpFIV5TkR6SUTQg3or0Mxecr5ZDZFQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\FURKAN\\Documents\\GitHub\\CQRS(.Net 5)\\CQRS(.Net 5)\\CQRS(.Net 5).csproj",
+  "projectFilePath": "C:\\Users\\FURKAN\\Documents\\GitHub\\WebAPICQRS\\CQRS(.Net 5)\\CQRS(.Net 5)\\CQRS(.Net 5).csproj",
   "expectedPackageFiles": [
     "C:\\Users\\FURKAN\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\FURKAN\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.16\\microsoft.aspnetcore.jsonpatch.5.0.16.nupkg.sha512",

@@ -37,6 +37,29 @@ namespace CQRS_.Net_5_.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Students");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Furkan",
+                            Surname = "Çiftci",
+                            age = 29
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Gökhan",
+                            Surname = "Çiftci",
+                            age = 24
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Hakan",
+                            Surname = "Çiftci",
+                            age = 39
+                        });
                 });
 #pragma warning restore 612, 618
         }
