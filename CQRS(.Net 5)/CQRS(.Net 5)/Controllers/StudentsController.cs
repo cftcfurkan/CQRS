@@ -12,11 +12,13 @@ namespace CQRS_.Net_5_.Controllers
         private readonly GetStudentByIdQueryHandler _getStudentByIdQueryHandler;
         private readonly GetStudentsQueryHandler _getStudentsQueryHandler;
         private readonly CreateStudentCommandHandler _createStudentCommandHandler;
-        public StudentsController(GetStudentByIdQueryHandler getStudentByIdQueryHandler, GetStudentsQueryHandler getStudentsQueryHandler, CreateStudentCommandHandler createStudentCommandHandler)
+        private readonly RemoveStudentCommandHandler _removeStudentCommandHandler;
+        public StudentsController(GetStudentByIdQueryHandler getStudentByIdQueryHandler, GetStudentsQueryHandler getStudentsQueryHandler, CreateStudentCommandHandler createStudentCommandHandler, RemoveStudentCommandHandler removeStudentCommandHandler)
         {
             _getStudentByIdQueryHandler = getStudentByIdQueryHandler;
             _getStudentsQueryHandler = getStudentsQueryHandler;
             _createStudentCommandHandler = createStudentCommandHandler;
+            _removeStudentCommandHandler = removeStudentCommandHandler;
         }
 
         [HttpGet]
@@ -38,7 +40,13 @@ namespace CQRS_.Net_5_.Controllers
         public IActionResult Create(CreateStudentCommand command)
         {
             _createStudentCommandHandler.Handle(command);
-            return Ok();
+            return Created("", command.Name);        // return Ok();
+        }
+        [HttpDelete("{id}")]
+        public IActionResult Remove(int id)
+        {
+            _removeStudentCommandHandler.Handle(new RemoveStudentCommand(id));
+            return NoContent();  // return Ok();
         }
 
     }

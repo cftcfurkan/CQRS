@@ -21,6 +21,7 @@ namespace CQRS_.Net_5_
             services.AddScoped<GetStudentByIdQueryHandler>();
             services.AddScoped<GetStudentsQueryHandler>();
             services.AddScoped<CreateStudentCommandHandler>();
+            services.AddScoped<RemoveStudentCommandHandler>();
             services.AddControllers().AddNewtonsoftJson(opt =>
             {
                 opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
