@@ -1,6 +1,8 @@
-﻿using CQRS_.Net_5_.Data;
+﻿using CQRS_.Net_5_.CQRS.Queries;
+using CQRS_.Net_5_.CQRS.Results;
+using CQRS_.Net_5_.Data;
 
-namespace CQRS_.Net_5_
+namespace CQRS_.Net_5_.CQRS.Handlers
 {
     public class GetStudentByIdQueryHandler
     {
@@ -18,7 +20,7 @@ namespace CQRS_.Net_5_
                 Name = student.Name,
                 Surname = student.Surname
             };
-            
+
         }
     }
 }

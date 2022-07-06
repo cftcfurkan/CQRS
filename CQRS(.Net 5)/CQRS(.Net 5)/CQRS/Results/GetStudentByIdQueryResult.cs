@@ -1,4 +1,4 @@
-﻿namespace CQRS_.Net_5_
+﻿namespace CQRS_.Net_5_.CQRS.Results
 {
     public class GetStudentByIdQueryResult
     {

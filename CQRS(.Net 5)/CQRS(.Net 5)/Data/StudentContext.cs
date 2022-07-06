@@ -16,7 +16,7 @@ namespace CQRS_.Net_5_.Data
             {
                 new Student(){Id=1,Name="Furkan",age=29,Surname="Çiftci"} ,
                 new Student(){Id=2,Name="Gökhan",age=24,Surname="Çiftci"} ,
-                new Student(){Id=3,Name="Hakan",age=39,Surname="Çiftci"} 
+                new Student(){Id=3,Name="Hakan",age=39,Surname="Çiftci"}
             });
             base.OnModelCreating(modelBuilder);
         }

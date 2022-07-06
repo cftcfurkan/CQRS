@@ -1,14 +1,10 @@
+using CQRS_.Net_5_.CQRS.Handlers;
 using CQRS_.Net_5_.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace CQRS_.Net_5_
 {
@@ -23,6 +19,7 @@ namespace CQRS_.Net_5_
                 opt.UseSqlServer("Server=DESKTOP-6F41OFO\\FURKAN; Database=Cqrs; Integrated Security=true;");
             });
             services.AddScoped<GetStudentByIdQueryHandler>();
+            services.AddScoped<GetStudentsQueryHandler>();
             services.AddControllers().AddNewtonsoftJson(opt =>
             {
                 opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
