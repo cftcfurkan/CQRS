@@ -1,4 +1,5 @@
-﻿using CQRS_.Net_5_.CQRS.Handlers;
+﻿using CQRS_.Net_5_.CQRS.Commands;
+using CQRS_.Net_5_.CQRS.Handlers;
 using CQRS_.Net_5_.CQRS.Queries;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,10 +11,12 @@ namespace CQRS_.Net_5_.Controllers
     {
         private readonly GetStudentByIdQueryHandler _getStudentByIdQueryHandler;
         private readonly GetStudentsQueryHandler _getStudentsQueryHandler;
-        public StudentsController(GetStudentByIdQueryHandler getStudentByIdQueryHandler, GetStudentsQueryHandler getStudentsQueryHandler)
+        private readonly CreateStudentCommandHandler _createStudentCommandHandler;
+        public StudentsController(GetStudentByIdQueryHandler getStudentByIdQueryHandler, GetStudentsQueryHandler getStudentsQueryHandler, CreateStudentCommandHandler createStudentCommandHandler)
         {
             _getStudentByIdQueryHandler = getStudentByIdQueryHandler;
             _getStudentsQueryHandler = getStudentsQueryHandler;
+            _createStudentCommandHandler = createStudentCommandHandler;
         }
 
         [HttpGet]
@@ -29,5 +32,14 @@ namespace CQRS_.Net_5_.Controllers
             var result = _getStudentByIdQueryHandler.Handle(new GetStudentByIdQuery(id));
             return Ok(result);
         }
+
+        [HttpPost]
+
+        public IActionResult Create(CreateStudentCommand command)
+        {
+            _createStudentCommandHandler.Handle(command);
+            return Ok();
+        }
+
     }
 }
